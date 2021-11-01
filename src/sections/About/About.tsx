@@ -50,7 +50,7 @@ export const About = () => {
           <StyledContentItem>Markdown</StyledContentItem>
         </StyledWrapper>
         <CvContainer />
-        <Button text="More about me" link="/AboutMe" />
+        <Button text="More about me" link="/About" />
       </Container>
     </Container>
   );

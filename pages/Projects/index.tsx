@@ -20,7 +20,7 @@ import { projects } from "./projectsData";
 import { Container } from "@components/Container.styled";
 import { SectionTitle } from "@components/_universal/SectionTitle/SectionTitle";
 
-const MyProjects = () => {
+const Projects = () => {
   return (
     <Container backgroundColor="#FEFEFE" variant="fluid">
       <Container variant="normal">
@@ -75,4 +75,4 @@ const MyProjects = () => {
   );
 };
 
-export default MyProjects;
+export default Projects;

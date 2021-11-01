@@ -9,9 +9,10 @@ import {
 export const UpButton = () => {
   const [hide, setHide] = useState(true);
   const offsetTop = () => {
-    window.pageYOffset > 1000 ? setHide(false) : setHide(true);
+    if (typeof window !== "undefined") {
+      window.pageYOffset > 1000 ? setHide(false) : setHide(true);
+    }
   };
-
   useEffect(() => {
     window.addEventListener("scroll", offsetTop);
     return () => window.removeEventListener("scroll", offsetTop);
@@ -19,7 +20,7 @@ export const UpButton = () => {
 
   return (
     <>
-      {hide && (
+      {!hide && (
         <StyledUpButton
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });

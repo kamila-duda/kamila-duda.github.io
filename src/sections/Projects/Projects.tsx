@@ -31,7 +31,7 @@ export const Projects = () => {
             </StyledProjectsContainer>
           </StyledArticle>
         ))}
-        <Button text="More projects" link="MyProjects" />
+        <Button text="More projects" link="/Projects" />
       </Container>
     </Container>
   );
