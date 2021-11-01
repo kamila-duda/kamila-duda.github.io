@@ -12,6 +12,8 @@ export const StyledDetailsContainer = styled.p`
   text-transform: uppercase;
   background: #00000038;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const StyledCardImage = styled.div<{ image: string }>(
@@ -58,12 +60,19 @@ export const StyledCard = styled.div`
   box-shadow: 0px 0px 25px 0px #e4e4e4;
   &:hover {
     ${StyledDetailsContainer} {
-      display: block;
+      display: flex;
     }
     ${StyledCardImage} {
       filter: blur(2px);
     }
   }
+`;
+
+export const Info = styled.span`
+  position: absolute;
+  bottom: 30%;
+  width: 100%;
+  background: ${({ theme }) => theme.color.white};
 `;
 
 export const StyledLink = styled.a`
@@ -76,16 +85,10 @@ export const StyledLink = styled.a`
   font-weight: bold;
   height: 100px;
   justify-content: center;
-  left: 50%;
-  position: absolute;
   text-align: center;
   text-decoration: none;
-  top: 35%;
   transition: transform 1s;
   width: 100px;
-  :first-of-type {
-    left: 20%;
-  }
   &:hover {
     color: ${({ theme }) => theme.color.primaryColor};
   }

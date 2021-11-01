@@ -39,9 +39,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         image={image}
       ></StyledCardImage>
       <StyledDetailsContainer>
-        <StyledLink href={code} target="_blank">
-          <FontAwesomeIcon icon={faCode} />
-        </StyledLink>
+        {code && (
+          <StyledLink href={code} target="_blank">
+            <FontAwesomeIcon icon={faCode} />
+          </StyledLink>
+        )}
         <StyledLink href={link} target="_blank">
           <FontAwesomeIcon icon={faSearch} />
         </StyledLink>
