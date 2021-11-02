@@ -9,9 +9,7 @@ export const Container = styled.div<ContainerProps>(
   ({ backgroundColor, variant, theme: { breakpoint } }) => css`
     position: relative;
     display: flex;
-    @media (max-width: ${breakpoint.s}) {
-      border-radius: 25px 25px 0% 0%;
-    }
+
     ${variant === "fluid" &&
     css`
       padding-bottom: 100px;

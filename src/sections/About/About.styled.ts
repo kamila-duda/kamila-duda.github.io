@@ -4,7 +4,6 @@ export const StyledWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
-    order: 1;
     width: 100%;
   }
 `;

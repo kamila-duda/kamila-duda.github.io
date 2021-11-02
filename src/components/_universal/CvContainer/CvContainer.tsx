@@ -7,9 +7,13 @@ import {
 } from "./CvContainer.styled";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
-export const CvContainer = () => {
+export interface CvContainerProps {
+  variant: "dark" | "light";
+}
+
+export const CvContainer: React.FC<CvContainerProps> = ({ variant }) => {
   return (
-    <StyledContainer>
+    <StyledContainer variant={variant}>
       <StyledParagraph>Feel free to download my CV</StyledParagraph>
       <StyledLink href="@public/files/Kamila Duda_CV_ANG.pdf" download>
         <StyledFontAwesomeIcon icon={faFilePdf} />

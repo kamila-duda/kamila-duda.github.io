@@ -4,14 +4,23 @@ import Link from "next/link";
 interface ButtonProps {
   text: string;
   link: string;
+  isExternal?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ text, link }) => {
+export const Button: React.FC<ButtonProps> = ({ text, link, isExternal }) => {
   return (
-    <Link href={link}>
-      <ButtonWrapper>
-        <StyledButton>{text}</StyledButton>
-      </ButtonWrapper>
-    </Link>
+    <>
+      {isExternal ? (
+        <ButtonWrapper href={link} target="_blank">
+          <StyledButton>{text}</StyledButton>
+        </ButtonWrapper>
+      ) : (
+        <Link href={link}>
+          <ButtonWrapper>
+            <StyledButton>{text}</StyledButton>
+          </ButtonWrapper>
+        </Link>
+      )}
+    </>
   );
 };

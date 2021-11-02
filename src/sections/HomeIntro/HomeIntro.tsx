@@ -4,7 +4,6 @@ import {
   StyledText,
   StyledColoredText,
   StyledContainer,
-  Decorator,
   ImageWrapper,
   Decoration,
   Wrapper,
@@ -13,6 +12,7 @@ import { IconsContainer } from "@components/_universal/IconsContainer/IconsConta
 import profile from "@public/images/me.jpg";
 import { Container } from "@components/Container.styled";
 import { useSpring, useTransform, useViewportScroll } from "framer-motion";
+import { Decorator } from "@components/Decorator.styled";
 
 export const HomeIntro = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,7 +27,7 @@ export const HomeIntro = () => {
   };
   return (
     <Container variant="fluid">
-      <Decorator />
+      <Decorator left={0} top={0} width={150} height={100} color="#6423FF" />
       <StyledContainer variant="normal">
         <div>
           <StyledColoredText

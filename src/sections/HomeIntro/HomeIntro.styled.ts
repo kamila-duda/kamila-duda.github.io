@@ -10,6 +10,11 @@ export const StyledContainer = styled(Container)`
   grid-template-rows: minmax(300px, 450px);
   align-items: center;
   align-content: center;
+  @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    grid-gap: 0;
+  }
 `;
 
 export const StyledText = styled(motion.h1)`
@@ -30,17 +35,6 @@ export const StyledText = styled(motion.h1)`
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     font-size: 24px;
   }
-`;
-
-export const Decorator = styled.div`
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 0;
-  top: 0;
-  border-radius: 50%;
-  background: ${({ theme }) => theme.color.primaryColor};
-  filter: blur(120px);
 `;
 
 export const StyledColoredText = styled(motion.h2)`
@@ -88,8 +82,13 @@ export const ImageWrapper = styled.div(
     overflow: hidden;
     border-radius: 50%;
     @media (max-width: ${breakpoint.s}) {
+      width: 400px;
+      height: 400px;
+      margin: auto;
     }
     @media (max-width: ${breakpoint.xs}) {
+      width: 300px;
+      height: 300px;
     }
   `
 );

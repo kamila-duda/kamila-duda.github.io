@@ -1,18 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { css } from "styled-components";
+import { CvContainerProps } from "./CvContainer";
 
-export const StyledContainer = styled.div(
-  ({ theme: { breakpoint } }) => css`
-    width: 100%;
-    padding: 100px 10px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    @media (max-width: ${breakpoint.s}) {
-      padding: 70px 10px;
-    }
-  `
-);
 export const StyledParagraph = styled.p(
   ({ theme: { breakpoint } }) => css`
     width: 100%;
@@ -21,7 +10,6 @@ export const StyledParagraph = styled.p(
     text-transform: uppercase;
     font-size: 18px;
     letter-spacing: 2px;
-    color: white;
     @media (max-width: ${breakpoint.s}) {
       font-size: 16px;
     }
@@ -44,7 +32,6 @@ export const StyledLink = styled.a(
     justify-items: center;
     text-decoration: none;
     transition: 0.5s ease-out;
-    color: ${color.darknestWhite};
     &:hover {
       color: ${color.lightPrimaryColor};
       ${StyledFontAwesomeIcon} {
@@ -55,6 +42,31 @@ export const StyledLink = styled.a(
       margin: 10px 5px;
       font-size: 12px;
       padding: 10px;
+    }
+  `
+);
+
+export const StyledContainer = styled.div<CvContainerProps>(
+  ({ variant, theme: { breakpoint, color } }) => css`
+    width: 100%;
+    padding: 100px 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    ${variant === "dark" &&
+    css`
+      ${StyledParagraph}, ${StyledLink} {
+        color: ${color.darknestWhite};
+      }
+    `}
+    ${variant === "light" &&
+    css`
+      ${StyledParagraph}, ${StyledLink} {
+        color: ${color.colorFont};
+      }
+    `}
+    @media (max-width: ${breakpoint.s}) {
+      padding: 80px 10px 0px;
     }
   `
 );

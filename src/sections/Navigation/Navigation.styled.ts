@@ -32,8 +32,8 @@ export const StyledNavList = styled.ul`
     display: none;
   }
 `;
-export const StyledNavLink = styled.a<{ selected?: boolean }>(
-  ({ selected, theme: { color } }) => css`
+export const StyledNavLink = styled.a(
+  ({ theme: { color } }) => css`
     cursor: pointer;
     text-decoration: none;
     text-transform: capitalize;
@@ -122,8 +122,9 @@ export const StyledNavListMobile = styled.ul<{ open: boolean }>(
       align-items: center;
       padding: 0;
       width: 100%;
-      margin: -400px 0 0px;
+      margin: -450px 0 0px;
       border-radius: 0 0 25px 25px;
+      transition: 1s;
       ${open &&
       css`
         margin: 0;

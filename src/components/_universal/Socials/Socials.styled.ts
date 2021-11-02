@@ -2,7 +2,16 @@ import styled, { css } from "styled-components";
 
 export const StyledIconWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   padding: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: 10px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    distplay: none;
+  }
 `;
 export const StyledLink = styled.a`
   font-size: 20px;
@@ -13,7 +22,7 @@ export const StyledLink = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  margin: 10px;
+  margin: 5px 0;
   color: ${({ theme }) => theme.color.primaryColor};
   background-color: ${({ theme }) => theme.color.white};
   border-radius: 50%;

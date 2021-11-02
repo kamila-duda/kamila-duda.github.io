@@ -24,7 +24,7 @@ export const Navigation = () => {
   return (
     <StyledNav>
       <Link href="/">
-        <HomeIcon>
+        <HomeIcon onClick={() => setIsOpen(false)}>
           <FontAwesomeIcon icon={faHome} />
         </HomeIcon>
       </Link>
@@ -40,14 +40,15 @@ export const Navigation = () => {
       <StyledNavListMobile open={isOpen}>
         {menuItems.map((item, index) => (
           <StyledNavItem key={index}>
-            <StyledNavLink
-              key={index}
-              onClick={() => {
-                setIsOpen(!isOpen);
-              }}
-            >
-              <Link href={item.link}>{item.name}</Link>
-            </StyledNavLink>
+            <Link href={item.link}>
+              <StyledNavLink
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+              >
+                {item.name}
+              </StyledNavLink>
+            </Link>
           </StyledNavItem>
         ))}
         <StyledIcon onClick={() => setIsOpen(!isOpen)}>
