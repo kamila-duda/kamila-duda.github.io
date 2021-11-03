@@ -17,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@next/bundle-analyzer": "^11.1.2",
     "framer-motion": "^4.1.17",
+    "gh-pages-deploy": "^0.5.1",
     "next": "11.1.2",
     "next-images": "^1.8.1",
     "react": "17.0.2",
