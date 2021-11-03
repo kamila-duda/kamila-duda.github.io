@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledProjectsContainer } from "./index.styled";
-import { projects } from "./projectsData";
+import { StyledProjectsContainer } from "@components/style/Projects.styled";
+import { projects } from "@shared/data/projectsData";
 import { Container } from "@components/Container.styled";
 import { ProjectCard } from "@components/_universal/ProjectCard/ProjectCard";
 import { Button } from "@components/_universal/Button/Button";

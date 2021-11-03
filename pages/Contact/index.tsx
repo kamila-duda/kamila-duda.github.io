@@ -4,7 +4,11 @@ import { StyledLink } from "@sections/Contact/Contact.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { Text, Wrapper, StyledContainer } from "./index.styled";
+import {
+  Text,
+  Wrapper,
+  StyledContainer,
+} from "@components/style/Contact.styled";
 
 const Contact = () => {
   return (

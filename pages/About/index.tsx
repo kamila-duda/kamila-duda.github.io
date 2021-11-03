@@ -1,5 +1,5 @@
 import { Hero } from "@components/_universal/Hero/Hero";
-import { StyledContainer } from "./index.styled";
+import { StyledContainer } from "@components/style/About.styled";
 import React from "react";
 import { Skills } from "@components/_universal/Skills/Skills";
 import { technologies } from "@shared/data/technologies";
