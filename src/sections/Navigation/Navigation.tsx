@@ -36,10 +36,7 @@ export const Navigation = () => {
       </Link>
       <StyledNavList>
         {menuItems.map((item, index) => (
-          <StyledNavItem
-            key={index}
-            onClick={() => gtagEvent("click", "nav", item.name)}
-          >
+          <StyledNavItem key={index} onClick={() => handleGaEvent(item.name)}>
             <Link href={item.link}>
               <StyledNavLink>{item.name} </StyledNavLink>
             </Link>
