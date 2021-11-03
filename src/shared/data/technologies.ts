@@ -1,7 +1,4 @@
 export const technologies = [
-  "HTML",
-  "CSS",
-  "SCSS",
   "JavaScript",
   "React",
   "React Router",
@@ -9,9 +6,12 @@ export const technologies = [
   "Redux Toolkit",
   "React Hooks",
   "TypeScript",
-  "Next.js",
-  "Vue.js",
+  "NEXT.js",
   "Styled Components",
+  "CSS",
+  "SCSS",
+  "Vue.js",
   "Bootstrap",
   "working with API",
+  "HTML",
 ];

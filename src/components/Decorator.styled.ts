@@ -18,5 +18,6 @@ export const Decorator = styled.div<{
     border-radius: 50%;
     background: ${color};
     filter: blur(120px);
+    z-index: -1;
   `
 );

@@ -4,6 +4,7 @@ import { SkillsProps } from "./Skills";
 export const StyledWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
     width: 100%;
   }
@@ -28,6 +29,7 @@ export const StyledContentItem = styled.p<Pick<SkillsProps, "variant">>(
     padding: 16px 24px;
     font-size: 16px;
     color: ${variant === "dark" ? color.darknestWhite : color.fontColor};
+    background: ${variant === "dark" ? "transparent" : color.darknestWhite};
     letter-spacing: 0.2em;
     @media (max-width: ${breakpoint.xs}) {
       font-size: 15px;
