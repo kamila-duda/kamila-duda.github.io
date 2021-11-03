@@ -1,6 +1,6 @@
 import ReactGA from "react-ga";
 
-const GA_TRACKING_ID = "G-VHNBR2HVXH";
+const GA_TRACKING_ID = "UA-211877175-1";
 
 export const Analytics = () => {
   const initGA = () => {
