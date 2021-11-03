@@ -19,14 +19,13 @@ const menuItems = [
   { name: "Contact", link: "/Contact" },
 ];
 
-const { logEvent } = Analytics();
-
-const handleGaEvent = (nav: string) => {
-  logEvent("Navigation", "click", `${nav} clicked`);
-};
-
 export const Navigation = () => {
+  const { logEvent } = Analytics();
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleGaEvent = (nav: string) => {
+    logEvent("Navigation", "click", `${nav} clicked`);
+  };
 
   return (
     <StyledNav>

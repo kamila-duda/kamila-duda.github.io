@@ -16,7 +16,7 @@ export const CvContainer: React.FC<CvContainerProps> = ({ variant }) => {
   const { logEvent } = Analytics();
 
   const handleGaEvent = () => {
-    logEvent("Cv", "click");
+    logEvent("Cv", "click", "Cv clicked");
   };
 
   return (
