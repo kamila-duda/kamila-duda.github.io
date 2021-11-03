@@ -7,10 +7,11 @@ import { Navigation } from "@sections/Navigation/Navigation";
 import { UpButton } from "@components/_universal/UpButton/UpButton";
 import { Footer } from "@sections/Footer/Footer";
 import { useGaInit } from "@utils/useGaInit";
-import router from "next/router";
+import { useRouter } from "next/router";
 import { Cookies } from "@components/Cookies/Cookies";
 
 function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   useGaInit(router);
   return (
     <>
