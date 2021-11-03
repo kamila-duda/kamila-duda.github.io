@@ -53,6 +53,7 @@ export const StyledContainer = styled.div<CvContainerProps>(
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
     ${variant === "dark" &&
     css`
       ${StyledParagraph}, ${StyledLink} {
@@ -61,7 +62,7 @@ export const StyledContainer = styled.div<CvContainerProps>(
     `}
     ${variant === "light" &&
     css`
-      ${StyledParagraph}, ${StyledLink} {
+      ${StyledParagraph}, ${StyledLink}, ${StyledFontAwesomeIcon} {
         color: ${color.colorFont};
       }
     `}

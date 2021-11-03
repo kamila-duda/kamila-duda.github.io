@@ -47,8 +47,8 @@ export const StyledNavLink = styled.a(
 export const HomeIcon = styled.a(
   ({ theme: { color } }) => css`
     cursor: pointer;
-    font-size: 24px;
-    margin: 15px 30px;
+    font-size: 36px;
+    margin: 5px 30px;
     color: ${color.primaryColor};
     position: relative;
     z-index: 1;
@@ -102,7 +102,7 @@ export const StyledIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px;
+  margin: 12px 30px;
   border: 1px solid ${({ theme }) => theme.color.primaryColor};
   border-radius: 50px;
   background-color: ${({ theme }) => theme.color.white};

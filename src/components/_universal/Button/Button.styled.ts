@@ -12,7 +12,7 @@ export const StyledButton = styled.button(
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 0.2em;
-    margin: 60px auto;
+
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -28,4 +28,5 @@ export const StyledButton = styled.button(
 
 export const ButtonWrapper = styled.a`
   text-decoration: none;
+  margin: 60px auto;
 `;

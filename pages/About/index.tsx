@@ -5,7 +5,7 @@ import { Skills } from "@components/_universal/Skills/Skills";
 import { technologies } from "@shared/data/technologies";
 import { TypingText } from "@components/_universal/TypingText/TypingText";
 import { CvContainer } from "@components/_universal/CvContainer/CvContainer";
-import { Spacer } from "@components/Space.styled";
+import { Spacer } from "@components/Spacer.styled";
 
 export const About = () => {
   return (

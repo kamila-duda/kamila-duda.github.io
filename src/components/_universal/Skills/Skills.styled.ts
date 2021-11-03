@@ -23,7 +23,7 @@ export const StyledContentItem = styled.p<Pick<SkillsProps, "variant">>(
   ({ variant, theme: { color, breakpoint } }) => css`
     border-radius: 25px;
     border: 1px solid
-      ${variant === "dark" ? color.darknestWhite : color.fontColor};
+      ${variant === "dark" ? color.lighterPrimaryColor : color.fontColor};
     margin: 16px;
     padding: 16px 24px;
     font-size: 16px;
@@ -33,6 +33,7 @@ export const StyledContentItem = styled.p<Pick<SkillsProps, "variant">>(
       font-size: 15px;
       letter-spacing: 1px;
       padding: 12px 18px;
+      margin: 10px;
     }
   `
 );
