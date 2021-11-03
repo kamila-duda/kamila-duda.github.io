@@ -18,6 +18,7 @@ export const CvContainer: React.FC<CvContainerProps> = ({ variant }) => {
   const handleGaEvent = () => {
     logEvent("Cv", "click");
   };
+
   return (
     <StyledContainer variant={variant}>
       <StyledParagraph>Feel free to download my CV</StyledParagraph>
