@@ -11,12 +11,19 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faHome } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { Analytics } from "@shared/analytics";
 
 const menuItems = [
   { name: "About me", link: "/About" },
   { name: "My projects", link: "/Projects" },
   { name: "Contact", link: "/Contact" },
 ];
+
+const { logEvent } = Analytics();
+
+const handleGaEvent = (nav: string) => {
+  logEvent("Navigation", "click", `${nav} clicked`);
+};
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +37,7 @@ export const Navigation = () => {
       </Link>
       <StyledNavList>
         {menuItems.map((item, index) => (
-          <StyledNavItem key={index}>
+          <StyledNavItem key={index} onClick={() => handleGaEvent(item.name)}>
             <Link href={item.link}>
               <StyledNavLink>{item.name} </StyledNavLink>
             </Link>
@@ -39,7 +46,7 @@ export const Navigation = () => {
       </StyledNavList>
       <StyledNavListMobile open={isOpen}>
         {menuItems.map((item, index) => (
-          <StyledNavItem key={index}>
+          <StyledNavItem key={index} onClick={() => handleGaEvent(item.name)}>
             <Link href={item.link}>
               <StyledNavLink
                 onClick={() => {
