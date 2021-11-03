@@ -1,5 +1,5 @@
 name: Deploy to GitHub Pages
-
+google_analytics: UA-211877175-1
 on:
   push:
     branches: [main]
