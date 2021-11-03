@@ -11,7 +11,7 @@ export const Experience = () => {
           <br />
           <StyledLink href="https://devanddeliver.com/" target="_blank">
             Dev and Deliver
-          </StyledLink>
+          </StyledLink>{" "}
           as a Junior Front-End Developer
         </ContentItem>
       </Content>
