@@ -19,12 +19,24 @@ const menuItems = [
   { name: "Contact", link: "/Contact" },
 ];
 
+interface customWindow extends Window {
+  gtag?: any;
+}
+declare const window: customWindow;
+
 export const Navigation = () => {
   const { logEvent } = Analytics();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleGaEvent = (nav: string) => {
     logEvent("Navigation", "click", `${nav} clicked`);
+  };
+
+  const gtagEvent = (ACTION: string, category: string, label: string) => {
+    window.gtag("event", ACTION, {
+      event_category: category,
+      event_label: label,
+    });
   };
 
   return (
@@ -36,7 +48,10 @@ export const Navigation = () => {
       </Link>
       <StyledNavList>
         {menuItems.map((item, index) => (
-          <StyledNavItem key={index} onClick={() => handleGaEvent(item.name)}>
+          <StyledNavItem
+            key={index}
+            onClick={() => gtagEvent("click", "nav", item.name)}
+          >
             <Link href={item.link}>
               <StyledNavLink>{item.name} </StyledNavLink>
             </Link>
