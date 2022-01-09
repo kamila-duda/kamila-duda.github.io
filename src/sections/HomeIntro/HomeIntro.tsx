@@ -7,10 +7,10 @@ import {
   ImageWrapper,
   Decoration,
   Wrapper,
+  StyledContainerFluid,
 } from "./HomeIntro.styled";
 import { IconsContainer } from "@components/_universal/IconsContainer/IconsContainer";
 import profile from "@public/images/me.jpg";
-import { Container } from "@components/Container.styled";
 import { useSpring, useTransform, useViewportScroll } from "framer-motion";
 import { Decorator } from "@components/Decorator.styled";
 import { ThemeContext } from "src/ThemeProvider";
@@ -28,7 +28,7 @@ export const HomeIntro = () => {
   };
   const { isDarkTheme } = useContext(ThemeContext);
   return (
-    <Container
+    <StyledContainerFluid
       variant="fluid"
       backgroundColor={isDarkTheme ? "#101223" : "#fefefe"}
     >
@@ -74,6 +74,6 @@ export const HomeIntro = () => {
           <Decoration variant="purple" />
         </Wrapper>
       </StyledContainer>
-    </Container>
+    </StyledContainerFluid>
   );
 };

@@ -13,6 +13,7 @@ export const darkTheme = {
     tag: "#dedede",
     homeIcon: "#ec9bfc",
     toggleIcon: "#6423FF",
+    borderToggleIcon: "#ec9bfc",
   },
   breakpoint: {
     extraSmall: "350px",

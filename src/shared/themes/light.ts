@@ -13,6 +13,7 @@ export const lightTheme = {
     tag: "#25293E",
     homeIcon: "#6423FF",
     toggleIcon: "#ec9bfc",
+    borderToggleIcon: "#6423FF",
   },
   breakpoint: {
     extraSmall: "350px",

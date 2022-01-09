@@ -17,6 +17,10 @@ export const StyledContainer = styled(Container)`
   }
 `;
 
+export const StyledContainerFluid = styled(Container)`
+  overflow-x: hidden;
+`;
+
 export const StyledText = styled(motion.h1)`
   top: 200px;
   left: 300px;

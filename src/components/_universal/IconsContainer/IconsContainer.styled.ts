@@ -9,6 +9,16 @@ export const StyledWrapperIcons = styled(motion.div)`
   flex-wrap: wrap;
   margin-top: 30px;
 `;
+
+export const ImageIcon = styled(motion.img)`
+  width: 30px;
+  height: 30px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    width: 20px;
+    height: 20px;
+  }
+`;
+
 export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   transition: transform 1s;
   font-size: 30px;

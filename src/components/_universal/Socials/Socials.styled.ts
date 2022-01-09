@@ -5,7 +5,7 @@ export const StyledIconWrapper = styled.div`
   flex-direction: column;
   padding: 0px;
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 3;
   padding: 10px;

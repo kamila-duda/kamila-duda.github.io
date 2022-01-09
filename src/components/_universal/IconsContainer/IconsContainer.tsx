@@ -4,6 +4,7 @@ import {
   StyledWrapperIcons,
   StyledFontAwesomeIcon,
   StyledIcon,
+  ImageIcon,
 } from "./IconsContainer.styled";
 import {
   faHtml5,
@@ -14,6 +15,9 @@ import {
   faReact,
   faGitAlt,
 } from "@fortawesome/free-brands-svg-icons";
+import typescript from "@public/images/typescript.png";
+import apollo from "@public/images/apollo-graphql.png";
+import nextjs from "@public/images/nextjs.png";
 
 const container = (): Variants => ({
   hidden: {
@@ -39,15 +43,7 @@ const item = (): Variants => ({
 });
 
 export const IconsContainer = () => {
-  const icons = [
-    faHtml5,
-    faCss3Alt,
-    faSass,
-    faBootstrap,
-    faJsSquare,
-    faReact,
-    faGitAlt,
-  ];
+  const icons = [faReact, faJsSquare, faCss3Alt, faBootstrap, faGitAlt];
 
   return (
     <StyledWrapperIcons
@@ -55,11 +51,21 @@ export const IconsContainer = () => {
       initial="hidden"
       animate="visible"
     >
+      <StyledIcon variants={item()}>
+        <ImageIcon src={typescript} />
+      </StyledIcon>
+
+      <StyledIcon variants={item()}>
+        <ImageIcon src={nextjs} />
+      </StyledIcon>
       {icons.map((icon) => (
         <StyledIcon key={icon.iconName} variants={item()}>
           <StyledFontAwesomeIcon icon={icon} />
         </StyledIcon>
       ))}
+      <StyledIcon variants={item()}>
+        <ImageIcon src={apollo} />
+      </StyledIcon>
     </StyledWrapperIcons>
   );
 };

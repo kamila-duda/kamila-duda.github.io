@@ -1,11 +1,11 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.button`
   z-index: 110;
   width: 70px;
   height: 40px;
   border-radius: 25px;
-  border: 1px solid ${({ theme }) => theme.color.secondColor};
+  border: 1px solid ${({ theme }) => theme.color.borderToggleIcon};
   position: relative;
   cursor: pointer;
 `;
