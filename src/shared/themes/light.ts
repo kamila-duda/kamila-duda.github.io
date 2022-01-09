@@ -1,0 +1,24 @@
+export const lightTheme = {
+  color: {
+    defaultFontColor: "#000000",
+    blackTransparent: "rgba(0, 0, 0, 0.7)",
+    primaryColor: "#6423FF",
+    lightPrimaryColor: "#CF5FE4",
+    lighterPrimaryColor: "#ec9bfc",
+    secondColor: "#25293E",
+    darknestWhite: "#FFFFFA",
+    white: "#FFFFFF",
+    background: "#FFFFFF",
+    cardBackground: "#ffffff",
+    tag: "#25293E",
+    homeIcon: "#6423FF",
+    toggleIcon: "#ec9bfc",
+  },
+  breakpoint: {
+    extraSmall: "350px",
+    xs: "420px",
+    another: "768px",
+    s: "991px",
+    m: "1300px",
+  },
+};

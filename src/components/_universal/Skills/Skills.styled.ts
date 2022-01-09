@@ -24,11 +24,11 @@ export const StyledContentItem = styled.p<Pick<SkillsProps, "variant">>(
   ({ variant, theme: { color, breakpoint } }) => css`
     border-radius: 25px;
     border: 1px solid
-      ${variant === "dark" ? color.lighterPrimaryColor : color.fontColor};
+      ${variant === "dark" ? color.lighterPrimaryColor : color.defaultFontColor};
     margin: 16px;
     padding: 16px 24px;
     font-size: 16px;
-    color: ${variant === "dark" ? color.darknestWhite : color.fontColor};
+    color: ${variant === "dark" ? color.darknestWhite : color.defaultFontColor};
     background: ${variant === "dark" ? "transparent" : color.darknestWhite};
     letter-spacing: 0.2em;
     @media (max-width: ${breakpoint.xs}) {

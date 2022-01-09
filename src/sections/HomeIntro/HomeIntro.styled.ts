@@ -20,7 +20,7 @@ export const StyledContainer = styled(Container)`
 export const StyledText = styled(motion.h1)`
   top: 200px;
   left: 300px;
-  color: ${({ theme }) => theme.color.fontColor};
+  color: ${({ theme }) => theme.color.defaultFontColor};
   font-size: 52px;
   font-weight: bold;
   margin: 0;
@@ -81,6 +81,7 @@ export const ImageWrapper = styled.div(
     height: 100%;
     overflow: hidden;
     border-radius: 50%;
+    z-index: 2;
     @media (max-width: ${breakpoint.s}) {
       width: 400px;
       height: 400px;
@@ -96,7 +97,7 @@ export const ImageWrapper = styled.div(
 export const Decoration = styled.div<{ variant: "pink" | "purple" }>(
   ({ variant, theme: { color } }) => css`
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     border-radius: 50%;
     ${variant === "pink" &&
     css`

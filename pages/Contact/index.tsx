@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Hero } from "@components/_universal/Hero/Hero";
 import { StyledLink } from "@sections/Contact/Contact.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,30 +9,38 @@ import {
   Wrapper,
   StyledContainer,
 } from "@components/style/Contact.styled";
+import { ThemeContext } from "src/ThemeProvider";
+import { Container } from "@components/Container.styled";
 
 const Contact = () => {
+  const { isDarkTheme } = useContext(ThemeContext);
   return (
-    <StyledContainer variant="normal">
-      <Hero title="Contact" />
-      <Text>
-        Let's stay in touch <br />
-        You can contact with me by:
-      </Text>
-      <Wrapper>
-        <StyledLink href="mailto: kamiladuda@int.pl">
-          <FontAwesomeIcon icon={faAt} />
-        </StyledLink>
-        <StyledLink
-          href="https://www.linkedin.com/in/kamila-duda"
-          target="_blank"
-        >
-          <FontAwesomeIcon icon={faLinkedinIn} />
-        </StyledLink>
-        <StyledLink href="https://github.com/kamila-duda" target="_blank">
-          <FontAwesomeIcon icon={faGithub} />
-        </StyledLink>
-      </Wrapper>
-    </StyledContainer>
+    <Container
+      variant="fluid"
+      backgroundColor={isDarkTheme ? "#101223" : "#fefefe"}
+    >
+      <StyledContainer variant="normal">
+        <Hero title="Contact" />
+        <Text>
+          Let's stay in touch <br />
+          You can contact with me by:
+        </Text>
+        <Wrapper>
+          <StyledLink href="mailto: kamiladuda@int.pl">
+            <FontAwesomeIcon icon={faAt} />
+          </StyledLink>
+          <StyledLink
+            href="https://www.linkedin.com/in/kamila-duda"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </StyledLink>
+          <StyledLink href="https://github.com/kamila-duda" target="_blank">
+            <FontAwesomeIcon icon={faGithub} />
+          </StyledLink>
+        </Wrapper>
+      </StyledContainer>
+    </Container>
   );
 };
 

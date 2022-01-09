@@ -7,6 +7,7 @@ export const StyledContainer = styled(Container)`
 
 export const Text = styled.p`
   font-size: 28px;
+  color: ${({ theme }) => theme.color.defaultFontColor};
 `;
 
 export const Wrapper = styled.div`

@@ -44,12 +44,19 @@ export const StyledNavLink = styled.a(
   `
 );
 
+export const Wrapper = styled.div(
+  ({ theme: { color } }) => css`
+    display: flex;
+    align-items: center;
+  `
+);
+
 export const HomeIcon = styled.a(
   ({ theme: { color } }) => css`
     cursor: pointer;
     font-size: 36px;
     margin: 5px 30px;
-    color: ${color.primaryColor};
+    color: ${color.homeIcon};
     position: relative;
     z-index: 1;
     transition: 1s;

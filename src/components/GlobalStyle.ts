@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: inherit;
 } 
 body{
-  background-color: #ffffff;
   background-size: 15%;
   font-family: "Poppins", sans-serif;
   margin: 0;

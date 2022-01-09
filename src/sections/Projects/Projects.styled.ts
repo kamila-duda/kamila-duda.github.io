@@ -55,3 +55,7 @@ export const StyledLine = styled.p`
     font-size: 15px;
   }
 `;
+
+export const Description = styled.p`
+  color: ${({ theme }) => theme.color.defaultFontColor};
+`;

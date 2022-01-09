@@ -50,14 +50,15 @@ export const StyledCardImage = styled.div<{ image: string }>(
   `
 );
 
-export const StyledCard = styled.div`
+export const StyledCard = styled.div<{ isDarkTheme: boolean }>(
+  ({ isDarkTheme, theme: { color } }) => `
   position: relative;
   width: 100%;
   text-align: center;
   margin: 8px;
   border-radius: 15px;
-  background-color: ${({ theme }) => theme.color.white};
-  box-shadow: 0px 0px 25px 0px #e4e4e4;
+  background-color: ${color.cardBackground};
+  box-shadow: ${isDarkTheme ? "transparent" : "0px 0px 25px 0px #e4e4e4"};
   &:hover {
     ${StyledDetailsContainer} {
       display: flex;
@@ -66,7 +67,8 @@ export const StyledCard = styled.div`
       filter: blur(2px);
     }
   }
-`;
+`
+);
 
 export const Info = styled.span`
   position: absolute;
@@ -108,7 +110,7 @@ export const StyledDetail = styled.span`
   padding: 5px;
   margin: 2px;
   text-align: center;
-  color: ${({ theme }) => theme.color.secondColor};
+  color: ${({ theme }) => theme.color.tag};
   @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
     padding: 2px;
     margin: 5px;
@@ -135,4 +137,5 @@ export const StyledDetail = styled.span`
 
 export const StyledName = styled.h4`
   text-transform: capitalize;
+  color: ${({ theme }) => theme.color.tag};
 `;

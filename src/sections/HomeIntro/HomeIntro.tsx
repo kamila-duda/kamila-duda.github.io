@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import {
   StyledImage,
   StyledText,
@@ -13,6 +13,7 @@ import profile from "@public/images/me.jpg";
 import { Container } from "@components/Container.styled";
 import { useSpring, useTransform, useViewportScroll } from "framer-motion";
 import { Decorator } from "@components/Decorator.styled";
+import { ThemeContext } from "src/ThemeProvider";
 
 export const HomeIntro = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,8 +26,12 @@ export const HomeIntro = () => {
       y: transformY,
     },
   };
+  const { isDarkTheme } = useContext(ThemeContext);
   return (
-    <Container variant="fluid">
+    <Container
+      variant="fluid"
+      backgroundColor={isDarkTheme ? "#101223" : "#fefefe"}
+    >
       <Decorator left={0} top={0} width={150} height={100} color="#6423FF" />
       <StyledContainer variant="normal">
         <div>

@@ -7,11 +7,13 @@ import {
   StyledNavListMobile,
   StyledIcon,
   HomeIcon,
+  Wrapper,
 } from "./Navigation.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faHome } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { Analytics } from "@shared/analytics";
+import ToggleButton from "@components/_universal/ToggleButton/ToggleButton";
 
 const menuItems = [
   { name: "About me", link: "/About" },
@@ -29,11 +31,14 @@ export const Navigation = () => {
 
   return (
     <StyledNav>
-      <Link href="/">
-        <HomeIcon onClick={() => setIsOpen(false)}>
-          <FontAwesomeIcon icon={faHome} />
-        </HomeIcon>
-      </Link>
+      <Wrapper>
+        <Link href="/">
+          <HomeIcon onClick={() => setIsOpen(false)}>
+            <FontAwesomeIcon icon={faHome} />
+          </HomeIcon>
+        </Link>
+        <ToggleButton />
+      </Wrapper>
       <StyledNavList>
         {menuItems.map((item, index) => (
           <StyledNavItem key={index} onClick={() => handleGaEvent(item.name)}>

@@ -1,4 +1,3 @@
-import { Decorator } from "@components/Decorator.styled";
 import React from "react";
 import { StyledTitle, StyledWrapper, StyledContentItem } from "./Skills.styled";
 
@@ -14,13 +13,6 @@ export const Skills: React.FC<SkillsProps> = ({ technologies, variant }) => {
         Technology Stack for Web Application Development:
       </StyledTitle>
       <StyledWrapper>
-        <Decorator
-          right={0}
-          top={150}
-          width={150}
-          height={100}
-          color="#6423FF"
-        />
         {technologies.map((technology) => (
           <StyledContentItem variant={variant}>{technology}</StyledContentItem>
         ))}

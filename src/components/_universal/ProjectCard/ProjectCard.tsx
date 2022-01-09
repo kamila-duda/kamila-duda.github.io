@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faSearch } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -10,6 +10,7 @@ import {
   StyledDetailsContainer,
   StyledName,
 } from "./ProjectCard.styled";
+import { ThemeContext } from "src/ThemeProvider";
 
 export interface ProjectCardProps {
   link: string;
@@ -26,8 +27,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   name,
 }) => {
+  const { isDarkTheme } = useContext(ThemeContext);
   return (
-    <StyledCard key={link}>
+    <StyledCard key={link} isDarkTheme={isDarkTheme}>
       <StyledTagContainer>
         {tags.map((tag) => (
           <StyledDetail key={tag}>{tag}</StyledDetail>

@@ -17,7 +17,7 @@ export const Decorator = styled.div<{
     top: ${top}px;
     border-radius: 50%;
     background: ${color};
-    filter: blur(120px);
-    z-index: -1;
+    filter: blur(100px);
+    z-index: 1;
   `
 );
