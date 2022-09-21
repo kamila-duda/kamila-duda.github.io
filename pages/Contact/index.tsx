@@ -8,9 +8,11 @@ import {
   Text,
   Wrapper,
   StyledContainer,
+  CenterText,
 } from "@components/style/Contact.styled";
 import { ThemeContext } from "src/ThemeProvider";
 import { Container } from "@components/Container.styled";
+import { Form } from "@components/_universal/Form/Form";
 
 const Contact = () => {
   const { isDarkTheme } = useContext(ThemeContext);
@@ -25,7 +27,9 @@ const Contact = () => {
           Let's stay in touch <br />
           You can contact with me by:
         </Text>
+        <Form />
         <Wrapper>
+          <CenterText>Or find me on:</CenterText>
           <StyledLink href="mailto: kamiladuda@int.pl">
             <FontAwesomeIcon icon={faAt} />
           </StyledLink>

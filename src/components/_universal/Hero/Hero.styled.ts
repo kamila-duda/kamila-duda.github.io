@@ -8,8 +8,7 @@ export const Title = styled.h1(
   `
 );
 
-export const Wrapper = styled.header(
-  ({ theme: { color } }) => css`
-    padding: 150px 0px;
-  `
-);
+export const Wrapper = styled.header`
+  padding: 150px 0px;
+  width: 100%;
+`;

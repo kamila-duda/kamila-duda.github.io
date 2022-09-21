@@ -12,6 +12,7 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import profile from "@public/images/me.jpg";
 import { Container } from "@components/Container.styled";
 import { SectionTitle } from "@components/_universal/SectionTitle/SectionTitle";
+import { Form } from "@components/_universal/Form/Form";
 
 export const Contact = () => {
   return (
@@ -23,7 +24,9 @@ export const Contact = () => {
           Let's stay in touch <br />
           You can contact with me by:
         </StyledLine>
+        <Form />
         <Wrapper>
+          <StyledLine>Or find me on:</StyledLine>
           <StyledLink href="mailto: kamiladuda@int.pl">
             <FontAwesomeIcon icon={faAt} />
           </StyledLink>

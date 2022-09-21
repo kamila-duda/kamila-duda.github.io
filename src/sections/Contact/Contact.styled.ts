@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const StyledLine = styled.p`
   width: 100%;
-  margin: 0;
+  margin: 30px 0 40px;
   font-size: 18px;
   color: ${({ theme }) => theme.color.white};
   text-align: center;
