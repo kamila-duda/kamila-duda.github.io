@@ -11,4 +11,8 @@ export const Title = styled.h1(
 export const Wrapper = styled.header`
   padding: 150px 0px;
   width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.s}) {
+    padding: 100px 0px 40px;
+  }
 `;

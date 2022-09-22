@@ -104,13 +104,13 @@ export const Form = () => {
         errors={errors.reply_to}
         label="Your email *"
         name="reply_to"
-        placeholder="e-mail"
+        placeholder="Email"
         type="text"
       />
       <Textarea
         control={control}
         label="Message *"
-        placeholder={"Your message"}
+        placeholder="Your message"
         name="message"
         errors={errors.message}
       />
