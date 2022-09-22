@@ -61,7 +61,12 @@ export const Form = () => {
     };
 
     emailjs
-      .send("service_bmzoxq8", "template_gq9lt8k", values, "HhYCDJNmSoNgo_XdU")
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE!,
+        values,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+      )
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
@@ -112,7 +117,7 @@ export const Form = () => {
       <ReCAPTCHA
         ref={recaptchaRef}
         size="normal"
-        sitekey={"6Ld33xIiAAAAAJq8957OARtVQxqld9_1H9ohuljR"}
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
         onChange={onReCAPTCHAChange}
       />
       {recapthaError && <ErrorText>Check reCAPTCHA</ErrorText>}
