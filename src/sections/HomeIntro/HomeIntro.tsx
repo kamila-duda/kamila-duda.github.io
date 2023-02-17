@@ -10,7 +10,7 @@ import {
   StyledContainerFluid,
 } from "./HomeIntro.styled";
 import { IconsContainer } from "@components/_universal/IconsContainer/IconsContainer";
-import profile from "@public/images/me.jpg";
+import profile from "@public/images/profile-big.png";
 import { useSpring, useTransform, useViewportScroll } from "framer-motion";
 import { Decorator } from "@components/Decorator.styled";
 import { ThemeContext } from "src/ThemeProvider";

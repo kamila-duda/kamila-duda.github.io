@@ -9,7 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import profile from "@public/images/me.jpg";
+import profile from "@public/images/profile.jpeg";
 import { Container } from "@components/Container.styled";
 import { SectionTitle } from "@components/_universal/SectionTitle/SectionTitle";
 import { Form } from "@components/_universal/Form/Form";
